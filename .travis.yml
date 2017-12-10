@@ -1,26 +1,36 @@
+env:
+	global:
+		secure: "ObneShhUfk4rsIajrYPNfGYNU4s2kzXu5F/kyJDKAVXXf2M3ybJ7Z5OCWMtwUnAhaupL9pjNmhTmD+Q59A3T7w/75pJB2PrqTbykDWY0GcZkCyXILmn4cApGXYO/n3ReRK8Q3lt0pQmuWigv7EGIhu75lSQpXJP9qQsZjHdtOBS2aAcemlhjgNvW3nS3jaP+cFUcjUHEDr26yL7ATtRFvA9ZXLtGYTb2eX5mvDawwqSh3AStK4AGdPLRqa4dBGlKdmYvIoRhUJt2Hkx+sWLDs14fHiJUbWGsw2ue4zmRStJ/bhdJrIq9eVrvKolaQB3ohoQvHTwYtCUf8LmQKCuYC1yFMX98IHdR0DZlCOU2QsfCnOxk3/gFRvvvLuhmpkGnTe7094Uhkups/t+bg2/GASEVIpPwzw8ppNH2ZQ9fs60Hg8a/x8DM36sQwcty2lLqEVEbbabPzBnL4ZU2rqgN5bNAfFOTaBnrIyMX63qMYU99vYewWGGz5vNEqBoXlWCf69Sw0+R7aAJDVc5mFApHzzZ7+5tfJeqsR5XvpEBK8KjB0rINDRTIxKnveb2nQlOWj8pOtFURxFIPWdzHlktr1OEYci2SCdAdBrDa3HaKcVU1Nm2Ygpd0tMhp3myZHqBPdL2ReTWaqDiZqmmFNL+3pWq0rlFFrV5NvUqJYIHTsRQ="
 sudo: required
 dist: trusty
 language: python
 python:
-  - "3.6"
+	- "3.6"
 addons:
-  chrome: stable
+	chrome: stable
 install:
-  - sudo apt-get install nodejs
-  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
-  - unzip ~/chromedriver_linux64.zip -d ~/
-  - rm ~/chromedriver_linux64.zip
-  - sudo mv -f ~/chromedriver /usr/local/share/
-  - sudo chmod +x /usr/local/share/chromedriver
-  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-  - npm install -g netlify-cli
-  - pip install -r requirements.txt
-  - nohup sudo Xvfb :10 -ac &
-  - export DISPLAY=:10
+	- sudo apt-get install nodejs
+	- wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
+	- unzip ~/chromedriver_linux64.zip -d ~/
+	- rm ~/chromedriver_linux64.zip
+	- sudo mv -f ~/chromedriver /usr/local/share/
+	- sudo chmod +x /usr/local/share/chromedriver
+	- sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+	- npm install -g netlify-cli
+	- pip install -r requirements.txt
+	- nohup sudo Xvfb :10 -ac &
+	- export DISPLAY=:10
 script:
-  - python motion.py
+	- python motion.py
 after_success:
-  - netlify deploy -p site -s $SITE_ID -t $ACCESS_TOKEN
+	- netlify deploy -p site -s $SITE_ID -t $ACCESS_TOKEN
 cache:
-  directories:
-  - site
+	directories:
+	- site
+
+	deploy:
+	provider: pages
+	skip_cleanup: true
+	github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+	on:
+		branch: master
