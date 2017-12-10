@@ -1,6 +1,3 @@
-env:
-	global:
-		secure: "ObneShhUfk4rsIajrYPNfGYNU4s2kzXu5F/kyJDKAVXXf2M3ybJ7Z5OCWMtwUnAhaupL9pjNmhTmD+Q59A3T7w/75pJB2PrqTbykDWY0GcZkCyXILmn4cApGXYO/n3ReRK8Q3lt0pQmuWigv7EGIhu75lSQpXJP9qQsZjHdtOBS2aAcemlhjgNvW3nS3jaP+cFUcjUHEDr26yL7ATtRFvA9ZXLtGYTb2eX5mvDawwqSh3AStK4AGdPLRqa4dBGlKdmYvIoRhUJt2Hkx+sWLDs14fHiJUbWGsw2ue4zmRStJ/bhdJrIq9eVrvKolaQB3ohoQvHTwYtCUf8LmQKCuYC1yFMX98IHdR0DZlCOU2QsfCnOxk3/gFRvvvLuhmpkGnTe7094Uhkups/t+bg2/GASEVIpPwzw8ppNH2ZQ9fs60Hg8a/x8DM36sQwcty2lLqEVEbbabPzBnL4ZU2rqgN5bNAfFOTaBnrIyMX63qMYU99vYewWGGz5vNEqBoXlWCf69Sw0+R7aAJDVc5mFApHzzZ7+5tfJeqsR5XvpEBK8KjB0rINDRTIxKnveb2nQlOWj8pOtFURxFIPWdzHlktr1OEYci2SCdAdBrDa3HaKcVU1Nm2Ygpd0tMhp3myZHqBPdL2ReTWaqDiZqmmFNL+3pWq0rlFFrV5NvUqJYIHTsRQ="
 sudo: required
 dist: trusty
 language: python
@@ -27,10 +24,9 @@ after_success:
 cache:
 	directories:
 	- site
-
-	deploy:
-	provider: pages
-	skip_cleanup: true
-	github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-	on:
-		branch: master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
