@@ -1,0 +1,1088 @@
+@font-face {
+	font-family: "Lyon-Text";
+	src: url("/fonts/lyon-text-regular.woff") format("woff") /*base64:skip*/;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Lyon-Text";
+	src: url("/fonts/lyon-text-regular-italic.woff") format("woff") /*base64:skip*/;
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Lyon-Text";
+	src: url("/fonts/lyon-text-semibold.woff") format("woff") /*base64:skip*/;
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Lyon-Text";
+	src: url("/fonts/lyon-text-semibold-italic.woff") format("woff") /*base64:skip*/;
+	font-style: italic;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url("/fonts/nitti-normal.woff") format("woff") /*base64:skip*/;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url("/fonts/nitti-normal-italic.woff") format("woff") /*base64:skip*/;
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url("/fonts/nitti-medium.woff") format("woff") /*base64:skip*/;
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url("/fonts/nitti-medium-italic.woff") format("woff") /*base64:skip*/;
+	font-style: italic;
+	font-weight: 600;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when hovered and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+/*pre {
+  overflow: auto;
+}*/
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: inherit;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/*
+input {
+  line-height: normal;
+}*/
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* ==================================================================== */
+/* Hover Feedback */
+/* ==================================================================== */
+
+/* Important to only turn on relative position on hover.
+		Otherwise could make things very slow. */
+.notion-feedback-cover:hover,
+.notion-feedback-cover:active,
+.notion-feedback-cover-focused,
+.notion-feedback-cover-activated {
+	position: relative;
+}
+
+.notion-feedback-cover:hover:after,
+.notion-feedback-cover:active:after,
+.notion-feedback-cover-focused:after,
+.notion-feedback-cover-activated:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgb(58, 56, 52);
+	opacity: 0.06;
+	border-radius: inherit;
+
+	/* Make sure doesn't block the content */
+	pointer-events: none;
+
+	transition: opacity 200ms;
+}
+
+.notion-feedback-cover:hover:after, .notion-feedback-cover-focused:after {
+	opacity: 0.06;
+}
+
+.notion-feedback-cover:active:after, .notion-feedback-cover-activated:after {
+	opacity: 0.06;
+}
+
+.notion-feedback-background {
+	transition: background 140ms ease-in;
+}
+
+.notion-feedback-background:hover {
+	background: rgba(58, 56, 52, 0.08);
+}
+
+.notion-mobile-tapping {
+	opacity: 0.6;
+}
+
+/* ==================================================================== */
+/* Cursor */
+/* ==================================================================== */
+
+.notion-cursor-default {
+	cursor: default;
+}
+
+.notion-cursor-pointer {
+	cursor: pointer;
+}
+
+.notion-sidebar-container, .notion-toolbox-container, .notion-topbar {
+	cursor: default;
+}
+
+.notion-disable-local-cursor .notion-sidebar-container,
+.notion-disable-local-cursor .notion-toolbox-container,
+.notion-disable-local-cursor .notion-topbar,
+.notion-disable-local-cursor .notion-cursor-default,
+.notion-disable-local-cursor .notion-cursor-pointer {
+	cursor: inherit;
+}
+
+#notion-app a {
+	cursor: inherit;
+}
+
+/* ==================================================================== */
+/* Animation */
+/* ==================================================================== */
+
+.notion-fadein {
+	animation: fadein ease-in 330ms;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ==================================================================== */
+/* Overwrite for CodeBlock */
+/* ==================================================================== */
+
+.line-numbers .line-numbers-rows {
+	border-right: none !important;
+}
+
+.line-numbers-rows > span:before {
+	color: #CCC !important;
+}
+
+/* ==================================================================== */
+/* Mobile Cordova.
+/* ==================================================================== */
+
+.notion-cordova * {
+	/* Remove the tap highlight */
+	-webkit-tap-highlight-color: transparent;
+	/* This prevents flickering, particularly when toggling team spaces
+	   showing in the sidebar on cordova */
+	transform-style: preserve-3d;
+}
+
+html, body, #notion-app {
+	/* - Disable the bouncy scrolling in OSX. */
+	/* - Let the main scroller to handle scrolling */
+	height: 100%;
+	overflow: hidden;
+}
+
+/*
+
+Name:       Base16 Atelier Sulphurpool Light
+Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
+
+Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: #f5f7ff;
+  color: #5e6687;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #dfe2f1;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #dfe2f1;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #898ea4;
+}
+
+.token.punctuation {
+  color: #5e6687;
+}
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.operator,
+.token.boolean,
+.token.number {
+  color: #c76b29;
+}
+
+.token.property {
+  color: #c08b30;
+}
+
+.token.tag {
+  color: #3d8fd1;
+}
+
+.token.string {
+  color: #22a2c9;
+}
+
+.token.selector {
+  color: #6679cc;
+}
+
+.token.attr-name {
+  color: #c76b29;
+}
+
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #22a2c9;
+}
+
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+  color: #ac9739;
+}
+
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #22a2c9;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #3d8fd1;
+}
+
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.inserted {
+  border-bottom: 1px dotted #202746;
+  text-decoration: none;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.important {
+  color: #c94922;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre > code.highlight {
+  outline: 0.4em solid #c94922;
+  outline-offset: .4em;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #dfe2f1;
+}
+
+.line-numbers-rows > span:before {
+  color: #979db4;
+}
+
+/* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
+.line-highlight {
+  background: rgba(107, 115, 148, 0.2);
+  background: -webkit-linear-gradient(left, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+  background: linear-gradient(to right, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+}
+
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	pointer-events: none;
+	font-size: 100%;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/*!
+ * https://github.com/arqex/react-datetime
+ */
+
+.rdt {
+	position: relative;
+	-webkit-user-select: none;
+}
+
+.rdtPicker {
+	display: none;
+	position: absolute;
+	width: 100%;
+	padding: 4px;
+	margin-top: 1px;
+	z-index: 99999 !important;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+.rdtOpen .rdtPicker {
+	display: block;
+}
+.rdtStatic .rdtPicker {
+	box-shadow: none;
+	position: static;
+}
+
+.rdtPicker .rdtTimeToggle {
+	text-align: center;
+}
+
+.rdtPicker table {
+	width: 100%;
+	margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+	text-align: center;
+	height: 28px;
+}
+
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtToday:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+	background: #eeeeee;
+	cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+	color: #999999;
+}
+.rdtPicker td.rdtToday {
+	position: relative;
+}
+.rdtPicker td.rdtToday:before {
+	content: '';
+	display: inline-block;
+	border-left: 7px solid transparent;
+	border-bottom: 7px solid #428bca;
+	border-top-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+	background-color: #428bca;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+	border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+	background: none;
+	color: #999999;
+	cursor: not-allowed;
+}
+
+.rdtPicker td span.rdtOld {
+	color: #999999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+	background: none;
+	color: #999999;
+	cursor: not-allowed;
+}
+.rdtPicker .dow {
+	width: 14.2857%;
+	border-bottom: none;
+}
+.rdtPicker th.rdtSwitch {
+	width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+	font-size: 21px;
+	vertical-align: top;
+}
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+	background: none;
+	color: #999999;
+	cursor: not-allowed;
+}
+.rdtPicker thead tr:first-child th {
+	cursor: pointer;
+}
+.rdtPicker thead tr:first-child th:hover {
+	background: #eeeeee;
+}
+
+.rdtPicker tfoot {
+	border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+.rdtPicker button:hover {
+	background-color: #eee;
+}
+
+.rdtPicker thead button {
+	width: 100%;
+	height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+	height: 50px;
+	width: 25%;
+	cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+	background: #eee;
+}
+
+.rdtCounters {
+	display: inline-block;
+}
+
+.rdtCounters > div {
+	float: left;
+}
+
+.rdtCounter {
+	height: 100px;
+}
+
+.rdtCounter {
+	width: 40px;
+}
+
+.rdtCounterSeparator {
+	line-height: 100px;
+}
+
+.rdtCounter .rdtBtn {
+	height: 40%;
+	line-height: 40px;
+	cursor: pointer;
+}
+.rdtCounter .rdtBtn:hover {
+	background: #eee;
+}
+.rdtCounter .rdtCount {
+	height: 20%;
+	font-size: 1.2em;
+}
+
+.rdtMilli {
+	vertical-align: middle;
+	padding-left: 8px;
+	width: 48px;
+}
+
+.rdtMilli input {
+	width: 100%;
+	font-size: 1.2em;
+	margin-top: 37px;
+}
+
+*, *:focus {
+	outline: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+th {
+	font-weight: 600;
+}
+
+/* Input placeholder style. Match the opacity with style/base.ts .*/
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: inherit;
+	opacity: 0.375;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: inherit;
+	opacity: 0.375;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: inherit;
+	opacity: 0.375;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: inherit;
+	opacity: 0.375;
+}
+::-ms-input-placeholder { /* Edge */
+  color: inherit;
+	opacity: 0.375;
+}
+
+*::selection {
+	background: rgba(78, 188, 221, 0.15);
+}
+
+#notion-app b {
+	font-weight: 600;
+}
+
+[contenteditable] {
+	-webkit-tap-highlight-color: transparent;
+}
+
+@keyframes pulse-ring {
+	0% {
+		transform: scale(0.33);
+	}
+	80%,
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes pulse-dot {
+	0% {
+		transform: scale(0.8);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.8);
+	}
+}
+
+@keyframes bounce-left {
+	0% {
+		transform: translateX(-200%);
+	}
+	25% {
+		transform: translateX(-199%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}

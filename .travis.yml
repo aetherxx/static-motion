@@ -1,0 +1,35 @@
+env:
+  global:
+    - secure: "RApTdJi757mqkh8nD+MMYmG1O71v5XSLkQXM13CNGiOLEES3I+bYDKKLXF/zZPGgCeFUjwyma5BjtKhLQTU/YxJF/ir8ZLUV+WvOcJyhYjBhhCsHpyBHa8g7O3w83qw65JwVXQYMsgzB/dWW/OpkKBBvDphujNty/ek7Ttia1VDfTIE4lCir1StV3f51+LtVeKy7ZUisP0ol68XDs6fp941gG8BBNIxpyh8WDP5iwUKKio/IChtqEHof6nEvl4MA3ORJRoDfMi4xvYPY/c49e4RzVe+ptDHU2TDQZfdrNah8lEPLvKUIBSilyH/A+dGFoWVhWZbYLFOegDUj3Ugn6FBK0UcnmqtmcZwpSyLIzZdin8/PxNgcfEUKhC91Xm8RFi5alpbHuUXNtpv1+ZGJbJ9ylffmlthzLipV3MDIkFlNRRvEQXw6M6FZa9JTt3G3RMtDJpiJfLltRr421UsXJpDA/TfnOLo7mWMj1CRUamGh1905jzsELrwhIWrNZlaqEjQP5CxyzQ89rL0NkUlnAwrSayzySUzlXsch8kZa3RVZMpTRLA+iOMCkBFwMEj7ZJUAaNGwjzBir9G/71mp9ALQuJitWQp0gC68ZHsVoFrYPXg2nkdXvjEXsoFPE0qDfmzZfm4k6oAogYZHIAPr5I3h5O+NKsRKlahzI1clXjgM="
+sudo: required
+dist: trusty
+language: python
+python:
+  - "3.6"
+addons:
+  chrome: stable
+install:
+  - sudo apt-get install nodejs
+  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - npm install -g netlify-cli
+  - pip install -r requirements.txt
+  - nohup sudo Xvfb :10 -ac &
+  - export DISPLAY=:10
+script:
+  - python motion.py
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+after_success:
+  - netlify deploy -p site -s $SITE_ID -t $ACCESS_TOKEN
+cache:
+  directories:
+  - site
