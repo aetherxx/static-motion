@@ -19,14 +19,14 @@ install:
   - export DISPLAY=:10
 script:
   - python motion.py
-after_success:
-  - netlify deploy -p site -s $SITE_ID -t $ACCESS_TOKEN
-cache:
-  directories:
-  - site
-  deploy:
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
+after_success:
+  - netlify deploy -p site -s $SITE_ID -t $ACCESS_TOKEN
+cache:
+  directories:
+  - site
